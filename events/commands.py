@@ -6,8 +6,6 @@ from discord import app_commands
 logger = logging.getLogger("cypher_bot")
 
 async def commands_load(tree: app_commands.CommandTree) -> int:
-    # Prefer a project-level Commands/ directory (../Commands relative to this file),
-    # but keep compatibility with events/Commands if you create it later.
     candidates = [
         pathlib.Path(__file__).resolve().parent.parent / "Commands",
         pathlib.Path(__file__).resolve().parent / "Commands",
